@@ -12,7 +12,7 @@ function Summary({ report, countryID }) {
     if (countryID) {
       console.log(countryID);
       const data = import(
-        `@highcharts/map-collection/countries/vn/vn-all.geo.json`
+        `@highcharts/map-collection/countries/${countryID}/${countryID}-all.geo.json`
       );
       data.then((res) => {
         setMapData(res);
